@@ -1,24 +1,22 @@
-package ir.aryanmo.utils.Utils
+package ir.aryanmo.utils.utils
 
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.Drawable
-import android.os.Build
 import android.support.annotation.ColorRes
 import android.support.annotation.DimenRes
 import android.support.annotation.DrawableRes
 import android.support.annotation.StringRes
 import android.support.v4.content.ContextCompat
-import android.text.Html
 import android.text.Spanned
-import android.util.Log
 import android.util.TypedValue
 
 import java.util.regex.Pattern
 
 import ir.aryanmo.utils.R
+import ir.aryanmo.utils.utils.log.logError
 
-    private fun getString(context: Context, s: String, html: Boolean): String {
+private fun getString(context: Context, s: String, html: Boolean): String {
         var s = s
         val matcher = Pattern.compile("\\{\\{(.+)\\}\\}").matcher(s)
         while (matcher.find()) {

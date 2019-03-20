@@ -1,7 +1,6 @@
-package ir.aryanmo.utils.Utils.UtilsClass
+package ir.aryanmo.utils.utils.utilsClass
 
 import android.util.Log
-import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.TimeZone

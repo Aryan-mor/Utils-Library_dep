@@ -1,22 +1,23 @@
-package ir.aryanmo.utils.Utils
+package ir.aryanmo.utils.utils.log
 
 import android.content.Context
 import android.support.v7.appcompat.R.id.message
 import android.util.Log
 import com.google.gson.Gson
-import com.google.gson.JsonObject
+import ir.aryanmo.utils.utils.FLAG
+import ir.aryanmo.utils.utils.getString
 
 import java.util.HashMap
 
 
 val LOG_VISIBILITY = true
-val INFO_MODE = 1
+val DEBUG_MODE = 1
 val ERROR_MODE = 2
-val DEBUG_MODE = 3
+val INFO_MODE = 3
 val VERBOSE_MODE = 4
 val WARN_MODE = 5
 val WTF_MODE = 6
-val DEFAULT_LOG_MODE = ERROR_MODE
+var DEFAULT_LOG_MODE = ERROR_MODE
 
 fun log(context: Context?, logMessage: Any, logFlag: String?, logType: Int) {
     if (!LOG_VISIBILITY)
@@ -142,7 +143,6 @@ fun log(list: List<Any>, logFlag: String?) = log(list, logFlag, DEFAULT_LOG_MODE
 fun log(list: List<Any>, logType: Int) = log(list, null, logType)
 
 fun log(list: List<Any>) = log(list, null)
-
 
 fun logGson(json: String, logFlag: String?, logType: Int) {
     val gson = Gson()

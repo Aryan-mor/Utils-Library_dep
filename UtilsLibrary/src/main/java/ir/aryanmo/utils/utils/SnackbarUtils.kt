@@ -1,15 +1,12 @@
-package ir.aryanmo.utils.Utils
+package ir.aryanmo.utils.utils
 
 import android.app.Activity
-import android.content.Context
 import android.support.annotation.StringRes
 import android.support.design.widget.Snackbar
 import android.view.View
-import ir.aryanmo.utils.Basic
-import java.time.Duration
 
 
-    fun snackbar(v: View, text: String, duration: Int, actionText: String?, runnable: Runnable?): Snackbar {
+fun snackbar(v: View, text: String, duration: Int, actionText: String?, runnable: Runnable?): Snackbar {
         val snackbar = Snackbar.make(v, getString(v.context, text), duration)
         if (runnable != null) {
             snackbar.setAction(getString(v.context, actionText!!)) {

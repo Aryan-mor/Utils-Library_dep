@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ir.aryanmo.utils.Utils;
+package ir.aryanmo.utils.utils;
 
 import android.annotation.TargetApi;
 import android.content.Context;

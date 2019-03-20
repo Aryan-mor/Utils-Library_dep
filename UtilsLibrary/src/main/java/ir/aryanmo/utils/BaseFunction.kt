@@ -1,7 +1,6 @@
 package ir.aryanmo.utils
 
 import ir.aryanmo.utils.log.BaseLogFunction
-import ir.aryanmo.utils.utils.BasePrefFunction
 
 
 interface BaseFunction : BaseLogFunction, BaseGetFunction, BaseIntentFunction, BaseToastFunction, BaseConverterFunction, BasePrefFunction {

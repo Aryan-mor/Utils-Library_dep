@@ -1,14 +1,9 @@
-package ir.aryanmo.utils.Utils
+package ir.aryanmo.utils.utils
 
-import android.os.Build
-import android.text.Html
-import android.text.Spanned
-import java.lang.Exception
 import java.util.regex.Pattern
-import kotlin.math.log
 
 
-    fun toTitleCase(s: String): String {
+fun toTitleCase(s: String): String {
         var space = true
         val builder = StringBuilder(s)
         val len = builder.length

@@ -1,9 +1,8 @@
-package ir.aryanmo.utils.Utils
+package ir.aryanmo.utils.utils
 
 import android.util.Log
-import java.math.BigInteger
 
-    fun toString(any: Any): String {
+fun toString(any: Any): String {
         return try {
             any.toString()
         } catch (e: java.lang.Exception) {
