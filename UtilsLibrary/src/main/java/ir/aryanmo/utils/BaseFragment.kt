@@ -11,8 +11,6 @@ import ir.aryanmo.utils.Utils.FLAG
 
 abstract class BaseFragment : Fragment(), BaseFunction {
 
-    private lateinit var view: View
-
     override var activityName: String = ""
         get() = this.javaClass.simpleName
     override var appContext: Context? = null
@@ -25,13 +23,6 @@ abstract class BaseFragment : Fragment(), BaseFunction {
         activityName = s
     }
 
-    override fun setMenuVisibility(visible: Boolean) {
-        super.setMenuVisibility(visible)
-        if (visible) {
-            visibleUI()
-        }
-    }
-
     override fun onAttach(context: Context?) {
         super.onAttach(context)
         if (logLifeCycle)
@@ -40,7 +31,6 @@ abstract class BaseFragment : Fragment(), BaseFunction {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        userVisibleHint = false
         if (logLifeCycle)
             logInfo("$activityName : onCreate()", "${FLAG}-LifeCycle")
     }
@@ -48,7 +38,6 @@ abstract class BaseFragment : Fragment(), BaseFunction {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         if (logLifeCycle)
             logInfo("$activityName : onCreateView()", "${FLAG}-LifeCycle")
-        customizeUI()
         return super.onCreateView(inflater, container, savedInstanceState)
     }
 
@@ -99,14 +88,4 @@ abstract class BaseFragment : Fragment(), BaseFunction {
         if (logLifeCycle)
             logInfo("$activityName : onDetach()", "${FLAG}-LifeCycle")
     }
-
-    override fun getView(): View {
-        return view
-    }
-
-    protected abstract fun customizeUI()
-
-    protected abstract fun visibleUI()
-
-    protected abstract fun inflate(): Int
 }

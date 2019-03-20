@@ -5,7 +5,7 @@ import com.google.gson.Gson
 import java.lang.Exception
 
 
-fun addTOSharePreference(context: Context, key: String, value: Any): Boolean {
+fun addPref(context: Context, key: String, value: Any): Boolean {
     val pr = SecurePreferences(context)
     when (value) {
         is String -> pr.edit().putString(key, value).apply()
@@ -24,33 +24,33 @@ fun addTOSharePreference(context: Context, key: String, value: Any): Boolean {
     return true
 }
 
-fun getBooleanFromSharePreference(context: Context, key: String, defaultValue: Boolean): Boolean {
+fun getPrefBoolean(context: Context, key: String, defaultValue: Boolean): Boolean {
     val pr = SecurePreferences(context)
     return pr.getBoolean(key, defaultValue)
 }
 
-fun getStringFromSharePreference(context: Context, key: String, defaultValue: String): String {
+fun getPrefString(context: Context, key: String, defaultValue: String): String {
     val pr = SecurePreferences(context)
     return pr.getString(key, defaultValue)
 }
 
-fun getIntFromSharePreference(context: Context, key: String, defaultValue: Int): Int {
+fun getPrefInt(context: Context, key: String, defaultValue: Int): Int {
     val pr = SecurePreferences(context)
     return pr.getInt(key, defaultValue)
 }
 
-fun getFloatFromSharePreference(context: Context, key: String, defaultValue: Float): Float {
+fun getPrefFloat(context: Context, key: String, defaultValue: Float): Float {
     val pr = SecurePreferences(context)
     return pr.getFloat(key, defaultValue)
 }
 
-fun getLongFromSharePreference(context: Context, key: String, defaultValue: Long): Long {
+fun getPrefLong(context: Context, key: String, defaultValue: Long): Long {
     val pr = SecurePreferences(context)
     return pr.getLong(key, defaultValue)
 }
 
-fun <T> getFromSharePreference(context: Context, key: String, classOf: Class<T>): Any {
-    val s = getStringFromSharePreference(context, key, "")
+fun <T> getPref(context: Context, key: String, classOf: Class<T>): Any {
+    val s = getPrefString(context, key, "")
     if (s != "") {
         return try {
             Gson().fromJson<T>(s, classOf)!!
@@ -59,17 +59,17 @@ fun <T> getFromSharePreference(context: Context, key: String, classOf: Class<T>)
         }
     }
 
-    val i = getIntFromSharePreference(context, key, -1)
+    val i = getPrefInt(context, key, -1)
     if (i != -1)
         return i
 
-    val f = getFloatFromSharePreference(context, key, -1f)
+    val f = getPrefFloat(context, key, -1f)
     if (f != -1f)
         return f
 
-    val l = getLongFromSharePreference(context, key, -1L)
+    val l = getPrefLong(context, key, -1L)
     if (l != -1L)
         return l
 
-    return getBooleanFromSharePreference(context, key, false)
+    return getPrefBoolean(context, key, false)
 }

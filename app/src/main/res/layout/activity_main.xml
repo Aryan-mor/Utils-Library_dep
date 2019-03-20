@@ -6,19 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ir.aryanmo.utils.Component.TextViewPackage.TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_margin="20dp"
-        android:text="{{MOJI|u i s b title}} {{}}"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30sp" />
-
-    <ir.aryanmo.utils.Component.TextViewPackage.TextView
+    <fragment
+        android:id="@+id/fragment"
+        android:name="ir.aryanmo.utilsexample.BlankFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/salam"/>
-
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_blank" />
 </RelativeLayout>

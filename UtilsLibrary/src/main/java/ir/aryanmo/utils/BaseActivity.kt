@@ -18,7 +18,6 @@ open class BaseActivity : AppCompatActivity(), BaseFunction {
 
     override var logLifeCycle: Boolean = false
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (logLifeCycle)

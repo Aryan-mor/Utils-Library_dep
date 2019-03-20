@@ -3,4 +3,7 @@
     <string name="salam">salam {{MOJI|bold,italic,title}} {{FARZIN|bold,upper}}</string>
     <string name="MOJI">moji farzinyane miladi {{FARZIN|bold,upper,i,s,u}} </string>
     <string name="FARZIN">farzin </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
