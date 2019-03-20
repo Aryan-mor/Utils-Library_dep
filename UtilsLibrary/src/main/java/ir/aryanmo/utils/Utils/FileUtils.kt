@@ -1,4 +1,4 @@
-package ir.aryanmo.utils.Utils
+package ir.aryanmo.utils.utils
 
 import android.webkit.MimeTypeMap
 import java.io.File

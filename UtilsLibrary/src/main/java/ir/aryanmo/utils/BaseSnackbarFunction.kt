@@ -7,37 +7,37 @@ import android.view.View
 
 interface BaseSnackbarFunction : Basic {
 
-    fun snackbar(v: View, text: String, duration: Int, actionText: String?, runnable: Runnable?): Snackbar = ir.aryanmo.utils.Utils.snackbar(v, text, duration, actionText, runnable)
+    fun snackbar(v: View, text: String, duration: Int, actionText: String?, runnable: Runnable?): Snackbar = ir.aryanmo.utils.utils.snackbar(v, text, duration, actionText, runnable)
 
-    fun snackbar(activity: Activity, text: String, duration: Int, actionText: String?, runnable: Runnable?): Snackbar = ir.aryanmo.utils.Utils.snackbar(activity, text, duration, actionText, runnable)
+    fun snackbar(activity: Activity, text: String, duration: Int, actionText: String?, runnable: Runnable?): Snackbar = ir.aryanmo.utils.utils.snackbar(activity, text, duration, actionText, runnable)
 
-    fun snackbar(v: View, text: String, duration: Int, @StringRes actionText: Int, runnable: Runnable?): Snackbar = ir.aryanmo.utils.Utils.snackbar(v, text, duration, actionText, runnable)
+    fun snackbar(v: View, text: String, duration: Int, @StringRes actionText: Int, runnable: Runnable?): Snackbar = ir.aryanmo.utils.utils.snackbar(v, text, duration, actionText, runnable)
 
-    fun snackbar(activity: Activity, text: String, duration: Int, @StringRes actionText: Int, runnable: Runnable?): Snackbar = ir.aryanmo.utils.Utils.snackbar(activity, text, duration, actionText, runnable)
+    fun snackbar(activity: Activity, text: String, duration: Int, @StringRes actionText: Int, runnable: Runnable?): Snackbar = ir.aryanmo.utils.utils.snackbar(activity, text, duration, actionText, runnable)
 
-    fun snackbar(text: String, duration: Int, actionText: String?, runnable: Runnable?): Snackbar = ir.aryanmo.utils.Utils.snackbar(appActivity!!, text, duration, actionText, runnable)
+    fun snackbar(text: String, duration: Int, actionText: String?, runnable: Runnable?): Snackbar = ir.aryanmo.utils.utils.snackbar(appActivity!!, text, duration, actionText, runnable)
 
-    fun snackbar(text: String, duration: Int, @StringRes actionText: Int, runnable: Runnable?): Snackbar = ir.aryanmo.utils.Utils.snackbar(appActivity!!, text, duration, actionText, runnable)
+    fun snackbar(text: String, duration: Int, @StringRes actionText: Int, runnable: Runnable?): Snackbar = ir.aryanmo.utils.utils.snackbar(appActivity!!, text, duration, actionText, runnable)
 
-    fun snackbar(v: View, @StringRes text: Int, duration: Int, actionText: String?, runnable: Runnable?): Snackbar = ir.aryanmo.utils.Utils.snackbar(v, text, duration, actionText, runnable)
+    fun snackbar(v: View, @StringRes text: Int, duration: Int, actionText: String?, runnable: Runnable?): Snackbar = ir.aryanmo.utils.utils.snackbar(v, text, duration, actionText, runnable)
 
-    fun snackbar(activity: Activity, @StringRes text: Int, duration: Int, actionText: String?, runnable: Runnable?): Snackbar = ir.aryanmo.utils.Utils.snackbar(activity, text, duration, actionText, runnable)
+    fun snackbar(activity: Activity, @StringRes text: Int, duration: Int, actionText: String?, runnable: Runnable?): Snackbar = ir.aryanmo.utils.utils.snackbar(activity, text, duration, actionText, runnable)
 
-    fun snackbar(@StringRes text: Int, duration: Int, actionText: String?, runnable: Runnable?): Snackbar = ir.aryanmo.utils.Utils.snackbar(appActivity!!, text, duration, actionText, runnable)
+    fun snackbar(@StringRes text: Int, duration: Int, actionText: String?, runnable: Runnable?): Snackbar = ir.aryanmo.utils.utils.snackbar(appActivity!!, text, duration, actionText, runnable)
 
-    fun snackbar(v: View, @StringRes text: Int, duration: Int,  @StringRes actionText: Int, runnable: Runnable?): Snackbar = ir.aryanmo.utils.Utils.snackbar(v, text, duration, actionText, runnable)
+    fun snackbar(v: View, @StringRes text: Int, duration: Int,  @StringRes actionText: Int, runnable: Runnable?): Snackbar = ir.aryanmo.utils.utils.snackbar(v, text, duration, actionText, runnable)
 
-    fun snackbar(activity: Activity, @StringRes text: Int, duration: Int,  @StringRes actionText: Int, runnable: Runnable?): Snackbar = ir.aryanmo.utils.Utils.snackbar(activity, text, duration, actionText, runnable)
+    fun snackbar(activity: Activity, @StringRes text: Int, duration: Int,  @StringRes actionText: Int, runnable: Runnable?): Snackbar = ir.aryanmo.utils.utils.snackbar(activity, text, duration, actionText, runnable)
 
-    fun snackbar(@StringRes text: Int, duration: Int,  @StringRes actionText: Int, runnable: Runnable?): Snackbar = ir.aryanmo.utils.Utils.snackbar(appActivity!!, text, duration, actionText, runnable)
+    fun snackbar(@StringRes text: Int, duration: Int,  @StringRes actionText: Int, runnable: Runnable?): Snackbar = ir.aryanmo.utils.utils.snackbar(appActivity!!, text, duration, actionText, runnable)
 
-    fun snackbar(v: View, text: String, duration: Int): Snackbar = ir.aryanmo.utils.Utils.snackbar(v, text, duration)
+    fun snackbar(v: View, text: String, duration: Int): Snackbar = ir.aryanmo.utils.utils.snackbar(v, text, duration)
 
-    fun snackbar(v: View, @StringRes text: Int, duration: Int): Snackbar = ir.aryanmo.utils.Utils.snackbar(v, text, duration)
+    fun snackbar(v: View, @StringRes text: Int, duration: Int): Snackbar = ir.aryanmo.utils.utils.snackbar(v, text, duration)
 
-    fun snackbar(activity: Activity, text: String, duration: Int): Snackbar = ir.aryanmo.utils.Utils.snackbar(activity, text, duration)
+    fun snackbar(activity: Activity, text: String, duration: Int): Snackbar = ir.aryanmo.utils.utils.snackbar(activity, text, duration)
 
-    fun snackbar(activity: Activity, @StringRes text: Int, duration: Int): Snackbar = ir.aryanmo.utils.Utils.snackbar(activity, text, duration)
+    fun snackbar(activity: Activity, @StringRes text: Int, duration: Int): Snackbar = ir.aryanmo.utils.utils.snackbar(activity, text, duration)
 
     fun snackbar(text: String, duration: Int): Snackbar = snackbar(appActivity!!, text, duration)
 
@@ -55,37 +55,37 @@ interface BaseSnackbarFunction : Basic {
 
     fun snackbar(text: Int): Snackbar = shortSnackbar(appActivity!!, text)
 
-    fun shortSnackbar(v: View, text: String): Snackbar = ir.aryanmo.utils.Utils.shortSnackbar(v, text)
+    fun shortSnackbar(v: View, text: String): Snackbar = ir.aryanmo.utils.utils.shortSnackbar(v, text)
 
-    fun shortSnackbar(v: View, @StringRes text: Int): Snackbar = ir.aryanmo.utils.Utils.shortSnackbar(v, text)
+    fun shortSnackbar(v: View, @StringRes text: Int): Snackbar = ir.aryanmo.utils.utils.shortSnackbar(v, text)
 
-    fun shortSnackbar(activity: Activity, text: String): Snackbar = ir.aryanmo.utils.Utils.shortSnackbar(activity, text)
+    fun shortSnackbar(activity: Activity, text: String): Snackbar = ir.aryanmo.utils.utils.shortSnackbar(activity, text)
 
-    fun shortSnackbar(activity: Activity, @StringRes text: Int): Snackbar = ir.aryanmo.utils.Utils.shortSnackbar(activity, text)
+    fun shortSnackbar(activity: Activity, @StringRes text: Int): Snackbar = ir.aryanmo.utils.utils.shortSnackbar(activity, text)
 
     fun shortSnackbar(text: String): Snackbar = shortSnackbar(appActivity!!, text)
 
     fun shortSnackbar(@StringRes text: Int): Snackbar = shortSnackbar(appActivity!!, text)
 
-    fun longSnackbar(v: View, text: String): Snackbar = ir.aryanmo.utils.Utils.longSnackbar(v, text)
+    fun longSnackbar(v: View, text: String): Snackbar = ir.aryanmo.utils.utils.longSnackbar(v, text)
 
-    fun longSnackbar(v: View, @StringRes text: Int): Snackbar = ir.aryanmo.utils.Utils.longSnackbar(v, text)
+    fun longSnackbar(v: View, @StringRes text: Int): Snackbar = ir.aryanmo.utils.utils.longSnackbar(v, text)
 
-    fun longSnackbar(activity: Activity, text: String): Snackbar = ir.aryanmo.utils.Utils.longSnackbar(activity, text)
+    fun longSnackbar(activity: Activity, text: String): Snackbar = ir.aryanmo.utils.utils.longSnackbar(activity, text)
 
-    fun longSnackbar(activity: Activity, @StringRes text: Int): Snackbar = ir.aryanmo.utils.Utils.longSnackbar(activity, text)
+    fun longSnackbar(activity: Activity, @StringRes text: Int): Snackbar = ir.aryanmo.utils.utils.longSnackbar(activity, text)
 
     fun longSnackbar(text: String): Snackbar = longSnackbar(appActivity!!,text)
 
     fun longSnackbar(@StringRes text: Int): Snackbar = longSnackbar(appActivity!!,text)
 
-    fun indefiniteSnackbar(v: View, text: String): Snackbar = ir.aryanmo.utils.Utils.indefiniteSnackbar(v, text)
+    fun indefiniteSnackbar(v: View, text: String): Snackbar = ir.aryanmo.utils.utils.indefiniteSnackbar(v, text)
 
-    fun indefiniteSnackbar(v: View, @StringRes text: Int): Snackbar = ir.aryanmo.utils.Utils.indefiniteSnackbar(v, text)
+    fun indefiniteSnackbar(v: View, @StringRes text: Int): Snackbar = ir.aryanmo.utils.utils.indefiniteSnackbar(v, text)
 
-    fun indefiniteSnackbar(activity: Activity, text: String): Snackbar = ir.aryanmo.utils.Utils.indefiniteSnackbar(activity, text)
+    fun indefiniteSnackbar(activity: Activity, text: String): Snackbar = ir.aryanmo.utils.utils.indefiniteSnackbar(activity, text)
 
-    fun indefiniteSnackbar(activity: Activity, @StringRes text: Int): Snackbar = ir.aryanmo.utils.Utils.indefiniteSnackbar(activity, text)
+    fun indefiniteSnackbar(activity: Activity, @StringRes text: Int): Snackbar = ir.aryanmo.utils.utils.indefiniteSnackbar(activity, text)
 
     fun indefiniteSnackbar(text: String): Snackbar = indefiniteSnackbar(appActivity!!, text)
 

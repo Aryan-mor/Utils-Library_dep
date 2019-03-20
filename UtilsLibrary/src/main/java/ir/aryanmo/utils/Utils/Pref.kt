@@ -1,7 +1,8 @@
-package ir.aryanmo.utils.Utils
+package ir.aryanmo.utils.utils
 
 import android.content.Context
 import com.google.gson.Gson
+import ir.aryanmo.utils.utils.log.logError
 import java.lang.Exception
 
 
@@ -49,27 +50,31 @@ fun getPrefLong(context: Context, key: String, defaultValue: Long): Long {
     return pr.getLong(key, defaultValue)
 }
 
-fun <T> getPref(context: Context, key: String, classOf: Class<T>): Any {
-    val s = getPrefString(context, key, "")
-    if (s != "") {
-        return try {
-            Gson().fromJson<T>(s, classOf)!!
-        } catch (e: Exception) {
-            s
+fun <T> getPref(context: Context, key: String, classOf: Class<T>): T? {
+    try {
+        val s = getPrefString(context, key, "")
+        if (s != "") {
+            return try {
+                Gson().fromJson<T>(s, classOf)!!
+            } catch (e: Exception) {
+                s as T
+            }
         }
+
+        val i = getPrefInt(context, key, -1)
+        if (i != -1)
+            return i as T
+
+        val f = getPrefFloat(context, key, -1f)
+        if (f != -1f)
+            return f as T
+
+        val l = getPrefLong(context, key, -1L)
+        if (l != -1L)
+            return l as T
+        return getPrefBoolean(context, key, false) as T
+    } catch (e: Exception) {
+        logError("UtilsLibrary::getPref", e)
+        return null
     }
-
-    val i = getPrefInt(context, key, -1)
-    if (i != -1)
-        return i
-
-    val f = getPrefFloat(context, key, -1f)
-    if (f != -1f)
-        return f
-
-    val l = getPrefLong(context, key, -1L)
-    if (l != -1L)
-        return l
-
-    return getPrefBoolean(context, key, false)
 }

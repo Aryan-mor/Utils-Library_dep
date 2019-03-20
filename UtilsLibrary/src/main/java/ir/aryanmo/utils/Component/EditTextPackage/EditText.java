@@ -11,8 +11,7 @@ import android.util.Log;
 
 import ir.aryanmo.utils.R;
 
-import static ir.aryanmo.utils.Utils.GetUtilsKt.getAccentColor;
-import static ir.aryanmo.utils.Utils.UtilsKt.dpToPx;
+import static ir.aryanmo.utils.utils.UtilsKt.dpToPx;
 
 public class EditText extends android.support.v7.widget.AppCompatEditText {
 
@@ -31,7 +30,7 @@ public class EditText extends android.support.v7.widget.AppCompatEditText {
 
     public EditText(Context context, AttributeSet attrs) {
         super(context, attrs);
-        borderColor = getAccentColor(getContext());
+        borderColor = ir.aryanmo.utils.utils.GetUtilsKt.getAccentColor(getContext());
         init(attrs);
     }
 
@@ -42,8 +41,8 @@ public class EditText extends android.support.v7.widget.AppCompatEditText {
 
     protected void setDefaultProperties() {
         // Min size
-        setMinimumHeight(ir.aryanmo.utils.Utils.UtilsKt.dpToPx(minHeight, getResources()));
-        setMinimumWidth(ir.aryanmo.utils.Utils.UtilsKt.dpToPx(minWidth, getResources()));
+        setMinimumHeight(ir.aryanmo.utils.utils.UtilsKt.dpToPx(minHeight, getResources()));
+        setMinimumWidth(ir.aryanmo.utils.utils.UtilsKt.dpToPx(minWidth, getResources()));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             setBackground(new GradientDrawable());
         }
@@ -69,7 +68,7 @@ public class EditText extends android.support.v7.widget.AppCompatEditText {
             TypedArray a = getContext().obtainStyledAttributes(attr, set);
             CharSequence t = a.getText(0);
             a.recycle();
-            setText(ir.aryanmo.utils.Utils.GetUtilsKt.getSpanned(getContext(), t.toString()));
+            setText(ir.aryanmo.utils.utils.GetUtilsKt.getSpanned(getContext(), t.toString()));
 
         } catch (Exception e) {
             logError("setTextFromAttr", e);
@@ -144,13 +143,13 @@ public class EditText extends android.support.v7.widget.AppCompatEditText {
             TypedArray a = getStyledAttributes(attr);
             borderWidth = a.getDimensionPixelSize(R.styleable.ArGlobal_ar_itemBorderWidth, -1);
             if (borderWidth != -1) {
-                borderWidth = ir.aryanmo.utils.Utils.UtilsKt.dpToPx(borderWidth, getResources());
+                borderWidth = ir.aryanmo.utils.utils.UtilsKt.dpToPx(borderWidth, getResources());
             } else {
                 borderWidth = a.getInt(R.styleable.ArGlobal_ar_itemBorderWidth, -1);
             }
             borderColor = a.getColor(R.styleable.ArGlobal_ar_itemBorderColor, -1);
             if (borderColor == -1) {
-                borderColor = ir.aryanmo.utils.Utils.GetUtilsKt.getAccentColor(getContext());
+                borderColor = ir.aryanmo.utils.utils.GetUtilsKt.getAccentColor(getContext());
             }
             setBorder(borderWidth, borderColor);
             a.recycle();
@@ -312,6 +311,6 @@ public class EditText extends android.support.v7.widget.AppCompatEditText {
     }
 
     private void logError(String s, Exception e) {
-        ir.aryanmo.utils.Utils.LogUtilsKt.logError("SimpleEditText::" + s, e);
+        ir.aryanmo.utils.utils.log.LogUtilsKt.logError("SimpleEditText::" + s, e);
     }
 }

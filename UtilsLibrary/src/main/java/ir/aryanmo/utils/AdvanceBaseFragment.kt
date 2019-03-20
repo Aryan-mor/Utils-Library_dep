@@ -1,17 +1,13 @@
 package ir.aryanmo.utils
 
 
-import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import ir.aryanmo.utils.Utils.FLAG
+import ir.aryanmo.utils.utils.FLAG
 
-abstract class AdvanceBaseFragment : BaseFragment(), BaseFunction {
+abstract class AdvanceBaseFragment : BaseFragment(){
 
     private lateinit var view: View
 

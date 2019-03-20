@@ -50,8 +50,8 @@ public class TextView extends android.support.v7.widget.AppCompatTextView {
 
     protected void setDefaultProperties() {
         // Min size
-        setMinimumHeight(ir.aryanmo.utils.Utils.UtilsKt.dpToPx(minHeight, getResources()));
-        setMinimumWidth(ir.aryanmo.utils.Utils.UtilsKt.dpToPx(minWidth, getResources()));
+        setMinimumHeight(ir.aryanmo.utils.utils.UtilsKt.dpToPx(minHeight, getResources()));
+        setMinimumWidth(ir.aryanmo.utils.utils.UtilsKt.dpToPx(minWidth, getResources()));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             setBackground(new GradientDrawable());
         }
@@ -78,7 +78,7 @@ public class TextView extends android.support.v7.widget.AppCompatTextView {
             CharSequence t = a.getText(0);
             a.recycle();
             if (t != null) {
-                setText(ir.aryanmo.utils.Utils.GetUtilsKt.getSpanned(getContext(), t.toString()));
+                setText(ir.aryanmo.utils.utils.GetUtilsKt.getSpanned(getContext(), t.toString()));
             }
         } catch (Exception e) {
             logError("setTextFromAttr", e);
@@ -146,13 +146,13 @@ public class TextView extends android.support.v7.widget.AppCompatTextView {
         TypedArray a = getStyledAttributes(attr);
         borderWidth = a.getDimensionPixelSize(R.styleable.ArGlobal_ar_itemBorderWidth, -1);
         if (borderWidth != -1) {
-            borderWidth = ir.aryanmo.utils.Utils.UtilsKt.dpToPx(borderWidth, getResources());
+            borderWidth = ir.aryanmo.utils.utils.UtilsKt.dpToPx(borderWidth, getResources());
         } else {
             borderWidth = a.getInt(R.styleable.ArGlobal_ar_itemBorderWidth, -1);
         }
         borderColor = a.getColor(R.styleable.ArGlobal_ar_itemBorderColor, -1);
         if (borderColor == -1) {
-            borderColor = ir.aryanmo.utils.Utils.GetUtilsKt.getAccentColor(getContext());
+            borderColor = ir.aryanmo.utils.utils.GetUtilsKt.getAccentColor(getContext());
         }
         setBorder(borderWidth, borderColor);
         a.recycle();
@@ -410,6 +410,6 @@ public class TextView extends android.support.v7.widget.AppCompatTextView {
     }
 
     private void logError(String s, Exception e) {
-        ir.aryanmo.utils.Utils.LogUtilsKt.logError("TextView::" + s, e);
+        ir.aryanmo.utils.utils.log.LogUtilsKt.logError("TextView::" + s, e);
     }
 }

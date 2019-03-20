@@ -1,10 +1,10 @@
-package ir.aryanmo.utils.Utils
+package ir.aryanmo.utils.utils
 
 import android.content.Context
 import android.content.Intent
 import android.os.Parcelable
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
+import ir.aryanmo.utils.utils.log.logError
 import java.io.Serializable
 import java.lang.Exception
 import java.math.BigInteger

@@ -3,9 +3,9 @@ package ir.aryanmo.utils
 import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import ir.aryanmo.utils.Utils.FLAG
+import ir.aryanmo.utils.utils.FLAG
 
-open class BaseActivity : AppCompatActivity(), BaseFunction {
+open class BaseActivity : AppCompatActivity(), BaseActivityFunction {
 
     override var appContext: Context? = null
         get() = this

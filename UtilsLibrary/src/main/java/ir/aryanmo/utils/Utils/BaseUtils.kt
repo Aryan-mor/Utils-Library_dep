@@ -1,9 +1,9 @@
-package ir.aryanmo.utils.Utils
+package ir.aryanmo.utils.utils
 
 import android.content.Context
 import android.content.res.Resources
 
-var FLAG = "Utils"
+var FLAG = "Util"
 
 fun setFlag(flag: String) {
     FLAG = flag

@@ -1,4 +1,4 @@
-package ir.aryanmo.utils.Utils
+package ir.aryanmo.utils.utils
 
 
 import android.annotation.SuppressLint
@@ -19,6 +19,8 @@ import android.util.TypedValue
 import android.os.VibrationEffect
 import android.os.Vibrator
 import ir.aryanmo.utils.R
+import ir.aryanmo.utils.utils.log.logError
+import ir.aryanmo.utils.utils.log.logNullPointerExceptionError
 
 
 val sdkApiLevel: Int
@@ -160,7 +162,7 @@ fun hideSoftKeyboard(activity: Activity, view: View) {
         val imm = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.applicationWindowToken, 0)
     } catch (n: NullPointerException) {
-        logNullPointerExceptionError("Utils::hideSoftKeyboard", n)
+        logNullPointerExceptionError("Util::hideSoftKeyboard", n)
     } catch (e: Exception) {
         logError("hideSoftKeyboard", e)
     }

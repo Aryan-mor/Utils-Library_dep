@@ -7,9 +7,9 @@ import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import ir.aryanmo.utils.Utils.FLAG
+import ir.aryanmo.utils.utils.FLAG
 
-abstract class BaseFragment : Fragment(), BaseFunction {
+abstract class BaseFragment : Fragment(), BaseActivityFunction {
 
     override var activityName: String = ""
         get() = this.javaClass.simpleName

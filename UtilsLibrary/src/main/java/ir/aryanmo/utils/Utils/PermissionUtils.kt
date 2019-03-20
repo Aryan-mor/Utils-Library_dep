@@ -1,4 +1,4 @@
-package ir.aryanmo.utils.Utils
+package ir.aryanmo.utils.utils
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -9,9 +9,8 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
-import android.widget.Toast
 
-    private val PREFS_FILE_NAME = "AppPreferences"
+private val PREFS_FILE_NAME = "AppPreferences"
     val REQUEST_READ_EXTERNAL_STORAGE_CODE = 11
     val REQUEST_WRITE_EXTERNAL_STORAGE_CODE = 22
     val REQUEST_CAMERA_CODE = 33

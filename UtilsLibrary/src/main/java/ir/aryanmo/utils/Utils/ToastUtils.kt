@@ -1,4 +1,4 @@
-package ir.aryanmo.utils.Utils
+package ir.aryanmo.utils.utils
 
 import android.content.Context
 import android.support.annotation.StringRes

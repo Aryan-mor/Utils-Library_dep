@@ -14,39 +14,39 @@ interface BaseGetFunction : Basic {
     //STRING
 
     fun gString(s: String): String {
-        return ir.aryanmo.utils.Utils.getString(appContext!!, s)
+        return ir.aryanmo.utils.utils.getString(appContext!!, s)
     }
 
     fun gString(@StringRes stringIdRes: Int): String {
-        return ir.aryanmo.utils.Utils.getString(appContext!!, stringIdRes)
+        return ir.aryanmo.utils.utils.getString(appContext!!, stringIdRes)
     }
 
     fun gStrings(divider: String, @StringRes vararg stringIdRes: Int): String {
-        return ir.aryanmo.utils.Utils.getStrings(appContext!!, divider, *stringIdRes)
+        return ir.aryanmo.utils.utils.getStrings(appContext!!, divider, *stringIdRes)
     }
 
 
     fun getFormattedString(@StringRes stringIdRes: Int, vararg args: Any): String {
-        return ir.aryanmo.utils.Utils.getFormattedString(appContext!!, stringIdRes, *args)
+        return ir.aryanmo.utils.utils.getFormattedString(appContext!!, stringIdRes, *args)
     }
 
 
     //SPANNED
 
     fun getSpanned(context: Context, s: String): Spanned {
-        return ir.aryanmo.utils.Utils.getSpanned(context,s)
+        return ir.aryanmo.utils.utils.getSpanned(context,s)
     }
 
     fun getSpanned(context: Context, @StringRes stringIdRes: Int): Spanned? {
-        return ir.aryanmo.utils.Utils.getSpanned(context,stringIdRes)
+        return ir.aryanmo.utils.utils.getSpanned(context,stringIdRes)
     }
 
     fun getSpanneds(context: Context, divider: String, @StringRes vararg stringIdRes: Int): Spanned {
-        return ir.aryanmo.utils.Utils.getSpanneds(context,divider,*stringIdRes)
+        return ir.aryanmo.utils.utils.getSpanneds(context,divider,*stringIdRes)
     }
 
     fun getFormattedSpanned(context: Context, @StringRes stringIdRes: Int, vararg args: Any): Spanned {
-        return ir.aryanmo.utils.Utils.getFormattedSpanned(context,stringIdRes,args)
+        return ir.aryanmo.utils.utils.getFormattedSpanned(context,stringIdRes,args)
     }
 
 
@@ -55,42 +55,42 @@ interface BaseGetFunction : Basic {
     }
     //DIMEN
     fun gDimen(@DimenRes dimenIdRes: Int): Float {
-        return ir.aryanmo.utils.Utils.getDimen(appContext!!, dimenIdRes)
+        return ir.aryanmo.utils.utils.getDimen(appContext!!, dimenIdRes)
     }
 
     //DRAWABLE
     fun gDrawable(@DrawableRes drawableResId: Int): Drawable? {
-        return ir.aryanmo.utils.Utils.getDrawable(appContext!!, drawableResId)
+        return ir.aryanmo.utils.utils.getDrawable(appContext!!, drawableResId)
     }
 
     //COLOR
     fun gColor(@ColorRes colorIdRes: Int): Int {
-        return ir.aryanmo.utils.Utils.getColor(appContext!!, colorIdRes)
+        return ir.aryanmo.utils.utils.getColor(appContext!!, colorIdRes)
     }
 
     fun gColor(s: String): Int {
-        return ir.aryanmo.utils.Utils.getColor(s)
+        return ir.aryanmo.utils.utils.getColor(s)
 
     }
 
     fun gColorHex(@ColorRes colorRes: Int): Int {
-        return ir.aryanmo.utils.Utils.getColor(appContext!!, colorRes)
+        return ir.aryanmo.utils.utils.getColor(appContext!!, colorRes)
     }
 
     fun gColorString(@ColorRes colorRes: Int): String {
-        return ir.aryanmo.utils.Utils.getColorString(appContext!!, colorRes)
+        return ir.aryanmo.utils.utils.getColorString(appContext!!, colorRes)
 
     }
 
     //File
     fun gMimeType(uri: String): String? {
         //TODO:Remove Function and create single file
-        return ir.aryanmo.utils.Utils.getMimeType(uri)
+        return ir.aryanmo.utils.utils.getMimeType(uri)
     }
 
     fun gFileType(uri: String): String? {
         //TODO:Remove Function and create single file
-        return ir.aryanmo.utils.Utils.getFileType(uri)
+        return ir.aryanmo.utils.utils.getFileType(uri)
     }
 
     //OTHER
